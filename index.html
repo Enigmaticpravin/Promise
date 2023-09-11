@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opion</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
   <style>
      body {
         background-color: #333333;
@@ -14,6 +17,8 @@
       backdrop-filter: blur(30px);
       margin-top: 20px;
       padding: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
       align-content: center;
@@ -22,9 +27,11 @@
       background: #222222;
       backdrop-filter: blur(30px);
       padding: 20px;
-      height: 300px;
+      height: auto;
       width: auto;
       text-align: left;
+      margin-left: 20px;
+      margin-right: 20px;
       margin-top: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(166, 166, 255, 0.5);
@@ -64,6 +71,179 @@
       margin-bottom: 20px;
       cursor: pointer;
     }
+    .flower {
+        position: relative;
+        border-radius: 300px;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .petal {
+        position: absolute;
+        left: 150px;
+        top: -150px;
+        background: yellow;
+        height: 300px;
+        width: 300px;
+        box-shadow: 0 0 60px -5px black;
+        /* transform: rotate(0deg) skewY(-90deg); */
+        transform-origin: bottom left;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.skills_section{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 13%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills_head{
+    width: 100%;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+}
+.skills_head h2{
+    font-size: 30px;
+}
+.skills_head h2 span{
+    color: #e74d06;
+}
+.skills_main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+    font-weight: 500;
+}
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.742);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #e74d06;
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 90%;
+    animation: html 2s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 90%;
+    }
+}
+.skill_bar .bar .css{
+    width: 85%;
+    animation: css 2s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .sass{
+    width: 80%;
+    animation: sass 2s;
+}
+@keyframes sass {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+.skill_bar .bar .js{
+    width: 80%;
+    animation: css 2s;
+}
+@keyframes js {
+    0%{
+        width: 0%;
+    }100%{
+        width: 80%;
+    }
+}
+.skill_bar .bar .react{
+    width: 75%;
+    animation: react 2s;
+}
+@keyframes react {
+    0%{
+        width: 0%;
+    }100%{
+        width: 75%;
+    }
+}
+.skill_bar .bar .node{
+    width: 70%;
+    animation: node 2s;
+}
+@keyframes node {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .express{
+    width: 65%;
+    animation: express 2s;
+}
+@keyframes express {
+    0%{
+        width: 0%;
+    }100%{
+        width: 65%;
+    }
+}
+.skill_bar .bar .mongo{
+    width: 60%;
+    animation: mongo 2s;
+}
+@keyframes mongo {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+
     .typewriter-text {
             overflow: hidden;
             border-right: .15em solid orange;
@@ -73,7 +253,7 @@
             animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
             color: #ffffff;
             size: 18px;
-            font-size: 44px;
+            font-size: 34px;
             font-style: bold;
             font-family: myFont;
             margin-top: 20px;
@@ -97,10 +277,91 @@
     <h2 class="subtitle">Enhancing Education, Transforming System</h2>
   </div>
 
-  <div class="glassmorphism2"> 
+  <div class="glassmorphism2">
     <div id="typewriter-container">
         <span id="typewriter-text" class="typewriter-text"></span>
     </div>
+    <div class="skills_section">
+      <div class="skills_head">
+          <h2>My <span>Skills</span></h2>
+          <p>Here is my skills to represent my Expertise</p>
+      </div>
+
+      <div class="skills_main">
+          <div class="skill_bar">
+              <div class="info">
+                  <p>HTML</p>
+                  <P>90%</P>
+              </div>
+              <div class="bar">
+                  <span class="html"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>CSS</p>
+                  <P>85%</P>
+              </div>
+              <div class="bar">
+                  <span class="css"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>SASS</p>
+                  <P>80%</P>
+              </div>
+              <div class="bar">
+                  <span class="sass"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Java Script</p>
+                  <P>80%</P>
+              </div>
+              <div class="bar">
+                  <span class="js"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>React js</p>
+                  <P>75%</P>
+              </div>
+              <div class="bar">
+                  <span class="react"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Node js</p>
+                  <P>70%</P>
+              </div>
+              <div class="bar">
+                  <span class="node"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Express js</p>
+                  <P>65%</P>
+              </div>
+              <div class="bar">
+                  <span class="express"></span>
+              </div>
+          </div>
+          <div class="skill_bar">
+              <div class="info">
+                  <p>Mongo DB</p>
+                  <P>60%</P>
+              </div>
+              <div class="bar">
+                  <span class="mongo"></span>
+              </div>
+          </div>
+      </div>
+  </div>
     <script>
         const texts = [
             "Ready to be a catalyst for change?",
@@ -142,6 +403,44 @@
         }
         window.addEventListener('load', startTypewriter);
     </script>
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+     <script>
+         //Note: pie with center angle > 150deg is not supported
+         //TODO: stack smaller pies to create larger pies to accomodate center angle > 150deg
+         var data = [
+             { weight: 1, color: '#B7D968' },
+             { weight: 1, color: '#B576AD' },
+             { weight: 1, color: '#E04644' },
+             { weight: 1.5, color: '#7CCCE5' },
+             { weight: 2, color: '#FDE47F' }
+         ];
+ 
+         var totalWeight = d3.sum(data, function (e) { return e.weight });
+ 
+         var pie = d3.pie()
+             .value(function (d) {
+                 return d.weight;
+             });
+ 
+         var petals = pie(data)
+ 
+         var toDegree = function (radians) { return radians * 180 / Math.PI; }
+ 
+         d3.selectAll('body')
+             .append('div')
+             .attr('class', 'flower')
+             .selectAll('div')
+             .data(petals)
+             .enter()
+             .append('div')
+             .attr('class', 'petal')
+             .attr('style', function (d) {
+                 var theta = d.endAngle - d.startAngle;
+                 var transform = 'transform: rotate(' + toDegree(d.startAngle) + 'deg) skewY(' + (toDegree(theta) - 90) + 'deg)';
+                 var color = 'background:' + d.data.color;
+                 return [transform, color].join(';');
+             });
+     </script>
   </div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.slice {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 100%, 100% 0);
+    position: absolute;
+    transform-origin: 100%;
+}
+
+.poverty {
+    background-color: #ff5733;
+    transform: rotate(40deg);
+}
+
+.corruption {
+    background-color: #f0c500;
+    transform: rotate(110deg);
+}
+
+.terrorism {
+    background-color: #ff0000;
+    transform: rotate(200deg);
+}
+
+.global-warming {
+    background-color: #1aa12a;
+    transform: rotate(280deg);
+}
+
+.violence {
+    background-color: #0000ff;
+    transform: rotate(340deg);
+}
