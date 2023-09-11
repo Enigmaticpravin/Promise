@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opion</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <style>
+     body {
+        background-color: #333333;
+        background-size: cover;
+        text-align: center;
+    }
+    .glassmorphism {
+      background: #222222;
+      backdrop-filter: blur(30px);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+      align-content: center;
+    }
+    @font-face {
+  font-family: "Lato";
+  src: url("fonts/lato") format("truetype");
+}
+    .glassmorphism2 {
+      background: #222222;
+      backdrop-filter: blur(30px);
+      padding: 20px;
+      height: 300px;
+      width: auto;
+      text-align: left;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(166, 166, 255, 0.5);
+      align-content: center;
+    }
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+    .separator {
+      display: inline-block;
+      width: 1px;
+      height: 20px;
+      background-color: white;
+      margin: 0 20px;
+    }
+
+    .subtitle {
+      display: inline-block;
+      size: 12px;
+      color: white;
+      font-style: normal;
+      font-family: Arial;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .typewriter-text {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
+            color: #ffffff;
+            size: 18px;
+            font-size: 24px;
+            margin-top: 20px;
+            font-family: Arial;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+  </style>
+</head>
+<body>
+  <div class="glassmorphism">
+    <img src="images/mainlogo.png" class="logo">
+    <span class="separator"></span>
+    <h2 class="subtitle">Enhancing Education, Transforming System</h2>
+  </div>
+
+  <div class="glassmorphism2"> 
+    <div id="typewriter-container">
+        <span id="typewriter-text" class="typewriter-text"></span>
+    </div>
+    <script>
+        const texts = [
+            "Hello, World!",
+            "This is a typewriter effect.",
+            "Click the button to start typing."
+        ];
+  
+        let textIndex = 0;
+        let charIndex = 0;
+        let isTyping = false;
+  
+        function startTypewriter() {
+            if (isTyping) return;
+            isTyping = true;
+            typeText();
+        }
+  
+        function typeText() {
+            if (charIndex < texts[textIndex].length) {
+                const textElement = document.getElementById('typewriter-text');
+                textElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 70);
+            } else {
+                setTimeout(eraseText, 2000);
+            }
+        }
+  
+        function eraseText() {
+            if (charIndex > 0) {
+                const textElement = document.getElementById('typewriter-text');
+                textElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, 70);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeText, 1500);
+            }
+        }
+        window.addEventListener('load', startTypewriter);
+    </script>
+  </div>
+</body>
+</html>
