@@ -6,6 +6,7 @@
   <title>Opion</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bodymovin/build/player/lottie.min.js"></script>
   <style>
      body {
         background-color: #333333;
@@ -32,6 +33,7 @@
       text-align: left;
       margin-left: 20px;
       margin-right: 20px;
+      margin-bottom: 20px;
       margin-top: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(166, 166, 255, 0.5);
@@ -44,6 +46,7 @@
     .separator {
       display: inline-block;
       width: 1px;
+      border-radius: 20px;
       height: 20px;
       background-color: white;
       margin: 0 20px;
@@ -54,12 +57,21 @@
       src: url(fonts/Lato-Bold.ttf);
     }
 
+    @font-face {
+      font-family: poppins;
+      src: url(fonts/Poppins-Medium.ttf);
+    }
+
+    @font-face {
+      font-family: poppinsReg;
+      src: url(fonts/Poppins-Regular.ttf);
+    }
+
     .subtitle {
       display: inline-block;
       size: 12px;
       color: white;
-      font-style: normal;
-      font-family: Arial;
+      font-family: poppinsReg;
     }
     .button {
       display: inline-block;
@@ -70,26 +82,6 @@
       font-size: 16px;
       margin-bottom: 20px;
       cursor: pointer;
-    }
-    .flower {
-        position: relative;
-        border-radius: 300px;
-        height: 300px;
-        width: 300px;
-        overflow: hidden;
-        margin: auto;
-    }
-
-    .petal {
-        position: absolute;
-        left: 150px;
-        top: -150px;
-        background: yellow;
-        height: 300px;
-        width: 300px;
-        box-shadow: 0 0 60px -5px black;
-        /* transform: rotate(0deg) skewY(-90deg); */
-        transform-origin: bottom left;
     }
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap');
 
@@ -155,25 +147,25 @@
     border-radius: 25px;
 }
 .skill_bar .bar .html{
-    width: 90%;
+    width: 30%;
     animation: html 2s;
 }
 @keyframes html {
     0%{
         width: 0%;
     }100%{
-        width: 90%;
+        width: 30%;
     }
 }
 .skill_bar .bar .css{
-    width: 85%;
+    width: 25%;
     animation: css 2s;
 }
 @keyframes css {
     0%{
         width: 0%;
     }100%{
-        width: 85%;
+        width: 25%;
     }
 }
 .skill_bar .bar .sass{
@@ -184,18 +176,18 @@
     0%{
         width: 0%;
     }100%{
-        width: 80%;
+        width: 100%;
     }
 }
 .skill_bar .bar .js{
-    width: 80%;
+    width: 100%;
     animation: css 2s;
 }
 @keyframes js {
     0%{
         width: 0%;
     }100%{
-        width: 80%;
+        width: 100%;
     }
 }
 .skill_bar .bar .react{
@@ -224,6 +216,10 @@
     width: 65%;
     animation: express 2s;
 }
+.head2{
+    color: white;
+    font-family: poppins;
+}
 @keyframes express {
     0%{
         width: 0%;
@@ -246,16 +242,16 @@
     .typewriter-text {
             overflow: hidden;
             border-right: .15em solid orange;
-            white-space: nowrap;
+            white-space: normal; /* Change this line */
             margin: 0 auto;
             letter-spacing: .15em;
             animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
             color: #ffffff;
             size: 18px;
             font-size: 34px;
-            font-style: bold;
-            font-family: myFont;
+            font-family: poppins;
             margin-top: 20px;
+            word-wrap: break-word;
         }
 
         @keyframes typing {
@@ -267,19 +263,78 @@
             from, to { border-color: transparent }
             50% { border-color: orange; }
         }
+        @media (max-width: 768px) {
+      .glassmorphism, .glassmorphism2 {
+        margin: 10px;
+      }
+      .glassmorphism {
+        padding: 10px;
+      }
+      .glassmorphism2 {
+        padding: 10px;
+      }
+      .subtitle {
+        font-size: 14px;
+      }
+
+      .separator {
+      display: inline-block;
+      width: 1px;
+      border-radius: 20px;
+      height: 10px;
+      background-color: white;
+      margin: 0 10px;
+    }
+      .logo {
+        width: 60px;
+        height: auto;
+      }
+      .subtitle {
+      display: inline-block;
+      size: 10px;
+      color: white;
+      font-family: poppinsReg;
+    }
+      .typewriter-text {
+        font-size: 20px;
+      }
+      .head2 {
+        font-size: 24px;
+      }
+      .skills_section {
+        padding: 0 10px;
+        margin-top: 10px;
+      }
+      .skills_head h2 {
+        font-size: 24px;
+      }
+      .skills_head p {
+        font-size: 14px;
+      }
+      .skill_bar .info p {
+        font-size: 14px;
+      }
+      .skill_bar .info p:nth-child(2) {
+        font-size: 14px;
+      }
+      .button {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="glassmorphism">
     <img src="images/mainlogo.png" class="logo">
     <span class="separator"></span>
-    <h2 class="subtitle">Enhancing Education, Transforming System</h2>
+    <h2 class="subtitle">Enhancing <span style="color: rgb(255, 208, 0);">Education,</span> Transforming <span style="color: rgb(255, 208, 0);">System</span></h2>
   </div>
-
+  <div id="lottie-animation"></div>
   <div class="glassmorphism2">
     <div id="typewriter-container">
         <span id="typewriter-text" class="typewriter-text"></span>
     </div>
+    <h1 class="head2">A platform, <br> that <span style="color: rgb(0, 153, 255);">empowers</span>, not <span style="color: red;">compares!</span></h1>
     <div class="skills_section">
       <div class="skills_head">
           <h2>My <span>Skills</span></h2>
@@ -401,45 +456,23 @@
             }
         }
         window.addEventListener('load', startTypewriter);
+        const animationPath = 'animation_lmgpgb1j';
+
+// Replace 'lottie-animation' with the id of your div
+const container = document.getElementById('lottie-animation');
+
+// Set the animation options (you can customize these as needed)
+const animationOptions = {
+  container: container,
+  renderer: 'svg', // Use 'svg' for better performance on the web
+  loop: true,
+  autoplay: true,
+  path: animationPath, // URL to your Lottie JSON file
+};
+
+// Create the Lottie animation
+const animation = lottie.loadAnimation(animationOptions);
     </script>
-     <script src="https://d3js.org/d3.v4.min.js"></script>
-     <script>
-         //Note: pie with center angle > 150deg is not supported
-         //TODO: stack smaller pies to create larger pies to accomodate center angle > 150deg
-         var data = [
-             { weight: 1, color: '#B7D968' },
-             { weight: 1, color: '#B576AD' },
-             { weight: 1, color: '#E04644' },
-             { weight: 1.5, color: '#7CCCE5' },
-             { weight: 2, color: '#FDE47F' }
-         ];
- 
-         var totalWeight = d3.sum(data, function (e) { return e.weight });
- 
-         var pie = d3.pie()
-             .value(function (d) {
-                 return d.weight;
-             });
- 
-         var petals = pie(data)
- 
-         var toDegree = function (radians) { return radians * 180 / Math.PI; }
- 
-         d3.selectAll('body')
-             .append('div')
-             .attr('class', 'flower')
-             .selectAll('div')
-             .data(petals)
-             .enter()
-             .append('div')
-             .attr('class', 'petal')
-             .attr('style', function (d) {
-                 var theta = d.endAngle - d.startAngle;
-                 var transform = 'transform: rotate(' + toDegree(d.startAngle) + 'deg) skewY(' + (toDegree(theta) - 90) + 'deg)';
-                 var color = 'background:' + d.data.color;
-                 return [transform, color].join(';');
-             });
-     </script>
   </div>
 </body>
 </html>
