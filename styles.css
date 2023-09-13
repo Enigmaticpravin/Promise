@@ -9,6 +9,7 @@
 body {
     background-color: #333333;
     background-size: cover;
+    align-items: center;
     text-align: center;
 }
 .glassmorphism {
@@ -34,17 +35,51 @@ body {
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(166, 166, 255, 0.5);
-  align-content: center;
 }
 .logo {
     width: 120px;
     height: auto;
+}
+
+.final{
+  margin-left: 30px;
+  display: none;
+  align-items: center;
+}
+
+.finaltwo{
+  margin-left: 30px;
+  display: none;
+  align-items: center;
+}
+
+.wardiv{
+  display: block;
+  padding: 20px;
+}
+.warhead {
+  color: white;
+  margin-right: 20px;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-left: 30px;
+}
+.wartxt{
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-family: poppins;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 .separator {
   display: inline-block;
   width: 1px;
   border-radius: 20px;
   height: 20px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
   background-color: white;
   margin: 0 20px;
 }
@@ -62,6 +97,11 @@ body {
 @font-face {
   font-family: poppinsReg;
   src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppinsLight;
+  src: url(fonts/Poppins-Light.ttf);
 }
 
 .subtitle {
@@ -106,8 +146,6 @@ margin-top: 100px;
 flex-direction: column;
 }
 /* Styling for the question container */
-/* Styling for the question container */
-/* Styling for the question container */
 .questions-container {
     max-width: fit-content;
     align-content: center;
@@ -119,7 +157,74 @@ flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
   }
+
+
+  .congrats{
+    display: flex;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+
+  .imagetwo {
+    margin-left: auto;  /* Move it to the right end */
+    margin-right: 0;    /* Reset any existing right margin */
+    display: block;     /* Make it a block-level element to center horizontally */
+    width: 450px;
+    margin-bottom: 20px;
+    height: 450px;
+  }
   
+  .imageone {
+    margin-left: 0;  /* Move it to the right end */
+    margin-right: auto;    /* Reset any existing right margin */
+    display: block;     /* Make it a block-level element to center horizontally */
+    width: 450px;
+    margin-bottom: 20px;
+    height: 450px;
+  }
+
+  .congratstxt{
+    color: white;
+    size: 100px;
+    margin-bottom: 20px;
+    align-content: center;
+  }
+
+  .pointstxt{
+    color: white;
+    font-size: 25px;
+    font-style: normal;
+    font-family: poppinsLight;
+  }
+
+  .maintxt {
+    color:  white;
+    font-size: 20px;
+    font-family: poppins;
+    margin-top: 20px;
+  }
+
+  .emoji{
+    height: 40px;
+    margin-left: 10px;
+    width: 40px;
+  }
+
+  .check {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .cross {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+
+  .finaltexts{
+    display: inline;
+  }
   /* Styling for individual questions */
   .question {
     display: none;
@@ -524,7 +629,7 @@ flex-direction: column;
 
 @media (max-width: 768px){
     .bookshelf {
-        display: flex;
+        display: none;
         flex-wrap: wrap; /* Allow books to wrap to the next row on small screens */
         justify-content: center; /* Center books horizontally on small screens */
         margin-top: 20px;

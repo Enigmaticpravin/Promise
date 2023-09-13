@@ -41,6 +41,66 @@
             <div class="title">Book 3</div>
         </div>
     </div>
+    <div class="final">
+      <div class="finaltexts">
+        <div class="congrats">
+          <h1 class="congratstxt">Congratulations</h1>
+          <img src="images/pngwing.com.png" class="emoji">
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You killed 10,900 farmers</p>
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You raped 14,600 girls</p>
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You abetted 13,100 students to suicide</p>
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You destroyed 133,680 hectares of forests</p>
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You elevated sea-level by 21%, melting 267 gigatonnes (Gt) of ice</p>
+        </div>
+        <div class="congrats">
+          <img src="images/check.png" class="check">
+          <p class="pointstxt">You committed corruption of ₹ 2.4 trillion</p>
+        </div>
+        <div class="congratstxt">
+          <p class="maintxt">BY NOT RAISING YOUR VOICE FOR ISSUES THAT MATTER!</p>
+        </div>
+      </div>
+      <img src="images/Natural Resource Depletion-rafiki.svg" class="imagetwo">
+    </div>
+    <div class="finaltwo">
+      <img src="images/Post-traumatic stress disorder-amico.svg" class="imageone">
+      <div class="wardiv">
+        <h1 class="warhead">The world spends $2.24 trillion on War each year</h1>
+        <p class="wartxt">Imagine the positive effect on humanity if <br> the same amount is used for welfare purpose</p>
+        <div class="congrats">
+          <img src="images/rejected.png" class="cross">
+          <p class="pointstxt">Almost 828 million people are facing hunger problem</p>
+        </div>
+        <div class="congrats">
+          <img src="images/rejected.png" class="cross">
+          <p class="pointstxt">719 million people are living in extreme poverty</p>
+        </div>
+        <div class="congrats">
+          <img src="images/rejected.png" class="cross">
+          <p class="pointstxt">771 million people don't have access to clean water</p>
+        </div>
+        <div class="congrats">
+          <img src="images/rejected.png" class="cross">
+          <p class="pointstxt">16.25% of the global population don't have proper Education</p>
+        </div>
+        
+      </div>
+    </div>
     <div class="questions-container">
         <!-- Question 1 -->
         <div class="question">
@@ -50,7 +110,6 @@
             <button class="option" data-value="option2">Congress</button>
           </div>
         </div>
-    
         <!-- Question 2 -->
         <div class="question">
           <h1>What name should India retain?</h1>
@@ -65,7 +124,7 @@
           <h1>How much money did Shah Rukh Khan fund to Pakistan?</h1>
           <div class="options">
             <button class="option" data-value="option1">60 cr</button>
-            <button class="option" data-value="option2">3 cr</button>
+            <button class="option" data-value="option2">45 cr</button>
           </div>
         </div>
     
@@ -97,13 +156,16 @@
         <div class="thank-you">
           <h1>Thank you for participating!</h1>
         </div>
+
       </div>
       <script>
       const questions = document.querySelectorAll('.question');
 const thankYou = document.querySelector('.thank-you');
 const type = document.querySelector('.typewriter-text')
 const heading = document.querySelector('.head2');
+const final = document.querySelector('.final');
 const bookset = document.querySelector('.bookshelf')
+const finaltwo = document.querySelector('.finaltwo')
 let currentQuestionIndex = 0;
 
 // Function to show the next question with a fade-in effect
@@ -123,11 +185,15 @@ function showNextQuestion() {
       questions[currentQuestionIndex].style.display = 'none';
       thankYou.style.display = 'block';
       thankYou.style.animation = 'fadeIn 0.5s ease-in-out';
-      bookset.style.display = 'flex';
+   /*   bookset.style.display = 'flex'; */
       type.style.display = 'null';
-      heading.style.display = 'block';
+      final.style.animation = 'fadeIn 0.5s ease-in-out';
+      final.style.display = 'flex'
+      finaltwo.style.display = 'flex'
+      finaltwo.style.animation = 'fadeIn 0.5s ease-in-out';
+    /*  heading.style.display = 'block';
       bookset.style.animation = 'fadeIn 0.5s ease-in-out';
-      heading.style.animation = 'fadeIn 0.5s ease-in-out';
+      heading.style.animation = 'fadeIn 0.5s ease-in-out'; */
     }, 500);
   }
 }
