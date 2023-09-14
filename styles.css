@@ -40,7 +40,26 @@ body {
     width: 120px;
     height: auto;
 }
-
+.displayimage{
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  align-content: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: -50px;
+  animation: hoverUpDown 2s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+@keyframes hoverUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Adjust the hover height as needed */
+  }
+}
 .final{
   margin-left: 30px;
   display: none;
@@ -72,6 +91,7 @@ body {
   margin-left: 30px;
   margin-bottom: 20px;
 }
+
 .separator {
   display: inline-block;
   width: 1px;
@@ -147,17 +167,15 @@ flex-direction: column;
 }
 /* Styling for the question container */
 .questions-container {
-    max-width: fit-content;
-    align-content: center;
-    text-align: center;
-    margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     background: #222222;
     font-family: 'Open Sans', sans-serif;
     animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
   }
-
 
   .congrats{
     display: flex;
@@ -170,6 +188,7 @@ flex-direction: column;
     display: block;     /* Make it a block-level element to center horizontally */
     width: 450px;
     margin-bottom: 20px;
+    flex: 1;
     height: 450px;
   }
   
@@ -185,9 +204,51 @@ flex-direction: column;
   .congratstxt{
     color: white;
     size: 100px;
+    margin-top: 20px;
     margin-bottom: 20px;
     align-content: center;
   }
+
+  .progress-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 40%;
+    padding: 20px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar {
+    width: 70%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    background-color: #007BFF;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .progress-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .questions-left {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
 
   .pointstxt{
     color: white;
@@ -205,6 +266,7 @@ flex-direction: column;
 
   .emoji{
     height: 40px;
+    margin-top: 20px;
     margin-left: 10px;
     width: 40px;
   }
@@ -224,6 +286,7 @@ flex-direction: column;
 
   .finaltexts{
     display: inline;
+    flex: 1;
   }
   /* Styling for individual questions */
   .question {
@@ -233,14 +296,14 @@ flex-direction: column;
   
   /* Styling for options */
   .options {
-    display: flex;
     margin-top: 20px;
-    width: 300px;
+    width: auto;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     align-content: center;
     flex-direction: row; /* Align options horizontally */
-    justify-content: space-between; /* Add space between options */
     animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
   }
   
@@ -464,6 +527,23 @@ animation: mongo 2s;
         50% { border-color: orange; }
     }
     @media (max-width: 768px) {
+      .final{
+        margin-left: 20px;
+        display: none;
+        align-items: center;
+      }
+      .emoji{
+        height: 20px;
+        margin-top: 13px;
+        margin-left: 10px;
+        width: 20px;
+      }
+      .check {
+        height: 20px;
+        width: 20px;
+        margin-top: 3px;
+        margin-right: 10px;
+      }
         .skills_section{
 width: 100%;
 height: 100vh;
@@ -628,6 +708,137 @@ flex-direction: column;
 }
 
 @media (max-width: 768px){
+  .finaltexts{
+    position: relative;
+    z-index: 0;
+  }
+  .cross {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .finaltwo{
+    margin-left: 20px;
+    display: none;
+    align-items: center;
+  }
+  .maintxt {
+    color:  white;
+    font-size: 14px;
+    font-family: poppins;
+    margin-top: 10px;
+  }
+  .glassmorphism2{
+    display: block;
+  }
+  .pointstxt{
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-family: poppinsLight;
+  }
+  .congrats{
+    display: flex;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+
+  .imagetwo {
+    /* Make it a block-level element to center horizontally */
+    width: 290px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 290px;
+  }
+  
+  .imageone {
+    margin-left: 0;  /* Move it to the right end */
+    margin-right: auto;    /* Reset any existing right margin */
+    display: none;     /* Make it a block-level element to center horizontally */
+    width: 350px;
+    margin-bottom: 10px;
+    height: 350px;
+  }
+
+  .congratstxt{
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-content: center;
+  }
+  .wardiv{
+    display: block;
+    padding: 10px;
+  }
+  .warhead {
+    color: white;
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .wartxt{
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-family: poppins;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .progress-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .thank-you {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+  
+  .progress-bar {
+    width: 60%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress-text {
+    font-size: 12px;
+    width: fit-content;
+    color: #333;
+  }
+  
+  .questions-left {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  .displayimage{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    align-content: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: -50px;
+    animation: hoverUpDown 2s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+  }
     .bookshelf {
         display: none;
         flex-wrap: wrap; /* Allow books to wrap to the next row on small screens */

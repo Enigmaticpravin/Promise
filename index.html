@@ -81,7 +81,7 @@
       <img src="images/Post-traumatic stress disorder-amico.svg" class="imageone">
       <div class="wardiv">
         <h1 class="warhead">The world spends $2.24 trillion on War each year</h1>
-        <p class="wartxt">Imagine the positive effect on humanity if <br> the same amount is used for welfare purpose</p>
+        <p class="wartxt">Imagine the positive effect on humanity if the same amount is used for welfare purposes</p>
         <div class="congrats">
           <img src="images/rejected.png" class="cross">
           <p class="pointstxt">Almost 828 million people are facing hunger problem</p>
@@ -98,9 +98,9 @@
           <img src="images/rejected.png" class="cross">
           <p class="pointstxt">16.25% of the global population don't have proper Education</p>
         </div>
-        
       </div>
     </div>
+    <img src="images/5 - RECRUITING.png" class="displayimage">
     <div class="questions-container">
         <!-- Question 1 -->
         <div class="question">
@@ -152,21 +152,48 @@
               <button class="option" data-value="option2">Maybe</button>
             </div>
           </div>
+
+          <div class="progress-menu">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <p class="progress-text">Questions left: <span class="questions-left">6</span></p>
+          </div>
+          
         <!-- Thank you message -->
         <div class="thank-you">
           <h1>Thank you for participating!</h1>
         </div>
-
       </div>
       <script>
-      const questions = document.querySelectorAll('.question');
+     const questions = document.querySelectorAll('.question');
 const thankYou = document.querySelector('.thank-you');
-const type = document.querySelector('.typewriter-text')
+const type = document.querySelector('.typewriter-text');
 const heading = document.querySelector('.head2');
 const final = document.querySelector('.final');
-const bookset = document.querySelector('.bookshelf')
-const finaltwo = document.querySelector('.finaltwo')
+const bookset = document.querySelector('.bookshelf');
+const finaltwo = document.querySelector('.finaltwo');
+const displayimage = document.querySelector('.displayimage');
+const progressmenu = document.querySelector('.progress-menu');
 let currentQuestionIndex = 0;
+
+// Get references to progress menu elements
+const progress = document.querySelector('.progress');
+const questionsLeft = document.querySelector('.questions-left');
+
+// Function to update progress menu
+function updateProgress() {
+  const questionsAnswered = currentQuestionIndex + 1;
+  const totalQuestions = questions.length;
+  const progressPercentage = (questionsAnswered / totalQuestions) * 100;
+  
+  // Update the progress bar width
+  progress.style.width = `${progressPercentage}%`;
+  
+  // Update the number of questions left
+  const questionsRemaining = totalQuestions - questionsAnswered;
+  questionsLeft.textContent = questionsRemaining;
+}
 
 // Function to show the next question with a fade-in effect
 function showNextQuestion() {
@@ -177,6 +204,7 @@ function showNextQuestion() {
       currentQuestionIndex++;
       questions[currentQuestionIndex].style.display = 'block';
       questions[currentQuestionIndex].style.animation = 'fadeIn 0.5s ease-in-out';
+      updateProgress(); // Update progress when the question changes
     }, 500);
   } else {
     // Show thank you message when all questions are answered
@@ -184,16 +212,18 @@ function showNextQuestion() {
     setTimeout(() => {
       questions[currentQuestionIndex].style.display = 'none';
       thankYou.style.display = 'block';
+      progressmenu.style.display = 'none';
+      displayimage.style.display = 'none';
       thankYou.style.animation = 'fadeIn 0.5s ease-in-out';
-   /*   bookset.style.display = 'flex'; */
-      type.style.display = 'null';
       final.style.animation = 'fadeIn 0.5s ease-in-out';
-      final.style.display = 'flex'
-      finaltwo.style.display = 'flex'
+      if (window.innerWidth >= 768) { // Desktop version
+    final.style.display = 'flex';
+    finaltwo.style.display = 'flex';
+  } else { // Mobile version
+    final.style.display = 'block';
+    finaltwo.style.display = 'block';
+  }
       finaltwo.style.animation = 'fadeIn 0.5s ease-in-out';
-    /*  heading.style.display = 'block';
-      bookset.style.animation = 'fadeIn 0.5s ease-in-out';
-      heading.style.animation = 'fadeIn 0.5s ease-in-out'; */
     }, 500);
   }
 }
@@ -203,6 +233,10 @@ const optionButtons = document.querySelectorAll('.option');
 optionButtons.forEach((button) => {
   button.addEventListener('click', showNextQuestion);
 });
+
+// Initial update of the progress menu
+updateProgress();
+
 
 // Initially, only the first question is displayed
 questions[currentQuestionIndex].style.display = 'block';
