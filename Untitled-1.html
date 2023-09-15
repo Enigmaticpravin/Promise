@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the parallax effect */
+        .parallax {
+            background-image: url('images/pexels-raychel-sanner-6783421.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+        .logo{
+            height: auto;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="bg-gray-900 text-white p-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+            <img src="images/mainlogo.png" class="logo">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#" class="hover:text-gray-400">About</a></li>
+                <li><a href="#" class="hover:text-gray-400">Portfolio</a></li>
+                <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with Parallax Effect -->
+<section class="parallax flex items-center justify-center">
+    <div class="container mx-auto text-center">
+        <h1 class="text-5xl font-extrabold text-white mb-4">Welcome to My Beautiful Website</h1>
+        <p class="text-xl text-gray-300">Discover stunning animations and visually appealing elements.</p>
+        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 mt-6 rounded-full inline-block transition duration-300">Learn More</a>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="bg-white py-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8">About Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Our Mission</h3>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam, justo sit amet rhoncus ullamcorper.</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Our Vision</h3>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam, justo sit amet rhoncus ullamcorper.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2023 My Beautiful Website</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,899 @@
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+body {
+    background-color: #333333;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+.glassmorphism {
+  background: #222222;
+  backdrop-filter: blur(30px);
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+.glassmorphism2 {
+  background: #222222;
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  height: auto;
+  width: auto;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(166, 166, 255, 0.5);
+}
+.logo {
+    width: 120px;
+    height: auto;
+}
+.displayimage{
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  align-content: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: -50px;
+  animation: hoverUpDown 2s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+@keyframes hoverUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Adjust the hover height as needed */
+  }
+}
+.final{
+  margin-left: 30px;
+  display: none;
+  align-items: center;
+}
+
+.finaltwo{
+  margin-left: 30px;
+  display: none;
+  align-items: center;
+}
+
+.wardiv{
+  display: block;
+  padding: 20px;
+}
+.warhead {
+  color: white;
+  margin-right: 20px;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-left: 30px;
+}
+.wartxt{
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-family: poppins;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.separator {
+  display: inline-block;
+  width: 1px;
+  border-radius: 20px;
+  height: 20px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: white;
+  margin: 0 20px;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: poppinsReg;
+  src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppinsLight;
+  src: url(fonts/Poppins-Light.ttf);
+}
+
+.subtitle {
+  display: inline-block;
+  size: 12px;
+  color: white;
+  font-family: poppinsReg;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: poppins;
+}
+.mainimage{
+    width: 300px;
+    height: 300px;
+    size-adjust: 100px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+} 
+.skills_section{
+width: 100%;
+height: 100vh;
+padding: 0px 13%;
+background-color: rgba(0, 0, 0, 0);
+display: flex;
+margin-top: 100px;
+flex-direction: column;
+}
+/* Styling for the question container */
+.questions-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #222222;
+    font-family: 'Open Sans', sans-serif;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+
+  .congrats{
+    display: flex;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+
+  .imagetwo {
+    margin-left: auto;  /* Move it to the right end */
+    margin-right: 0;    /* Reset any existing right margin */
+    display: block;     /* Make it a block-level element to center horizontally */
+    width: 450px;
+    margin-bottom: 20px;
+    flex: 1;
+    height: 450px;
+  }
+  
+  .imageone {
+    margin-left: 0;  /* Move it to the right end */
+    margin-right: auto;    /* Reset any existing right margin */
+    display: block;     /* Make it a block-level element to center horizontally */
+    width: 450px;
+    margin-bottom: 20px;
+    height: 450px;
+  }
+
+  .congratstxt{
+    color: white;
+    size: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-content: center;
+  }
+
+  .progress-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 40%;
+    padding: 20px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar {
+    width: 70%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    background-color: #007BFF;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .progress-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .questions-left {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+
+  .pointstxt{
+    color: white;
+    font-size: 25px;
+    font-style: normal;
+    font-family: poppinsLight;
+  }
+
+  .maintxt {
+    color:  white;
+    font-size: 20px;
+    font-family: poppins;
+    margin-top: 20px;
+  }
+
+  .emoji{
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 40px;
+  }
+
+  .check {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .cross {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+
+  .finaltexts{
+    display: inline;
+    flex: 1;
+  }
+  /* Styling for individual questions */
+  .question {
+    display: none;
+    color: white;
+  }
+  
+  /* Styling for options */
+  .options {
+    margin-top: 20px;
+    width: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+    flex-direction: row; /* Align options horizontally */
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+  
+  /* Styling for option buttons */
+  .option {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .option:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+  
+  /* Styling for the thank you message */
+  .thank-you {
+    display: none;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+  
+  /* Fade-in animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade-out animation keyframes */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+.skills_head{
+width: 100%;
+margin-bottom: 100px;
+display: grid;
+place-items: center;
+color: white;
+text-align: center;
+}
+.skills_head h2{
+font-size: 30px;
+}
+.skills_head h2 span{
+color: #e74d06;
+}
+.skills_main{
+width: 100%;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-row-gap: 30px;
+grid-column-gap: 50px;
+}
+.skills_main .skill_bar .info{
+display: flex;
+justify-content: space-between;
+color: white;
+align-items: center;
+padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+font-weight: 500;
+}
+.skill_bar .bar{
+width: 100%;
+height: 10px;
+background-color: rgba(255, 255, 255, 0.742);
+border-radius: 25px;
+margin-top: 5px;
+position: relative;
+}
+.skill_bar .bar span{
+width: 50%;
+height: 100%;
+position: absolute;
+background-color: #e74d06;
+border-radius: 25px;
+}
+.skill_bar .bar .html{
+width: 30%;
+animation: html 2s;
+}
+@keyframes html {
+0%{
+    width: 0%;
+}100%{
+    width: 30%;
+}
+}
+.skill_bar .bar .css{
+width: 25%;
+animation: css 2s;
+}
+@keyframes css {
+0%{
+    width: 0%;
+}100%{
+    width: 25%;
+}
+
+}
+.skill_bar .bar .sass{
+width: 80%;
+animation: sass 2s;
+}
+@keyframes sass {
+0%{
+    width: 0%;
+}100%{
+    width: 100%;
+}
+}
+.skill_bar .bar .js{
+width: 100%;
+animation: css 2s;
+}
+@keyframes js {
+0%{
+    width: 0%;
+}100%{
+    width: 100%;
+}
+}
+.skill_bar .bar .react{
+width: 75%;
+animation: react 2s;
+}
+@keyframes react {
+0%{
+    width: 0%;
+}100%{
+    width: 75%;
+}
+}
+.skill_bar .bar .node{
+width: 70%;
+animation: node 2s;
+}
+@keyframes node {
+0%{
+    width: 0%;
+}100%{
+    width: 70%;
+}
+}
+.skill_bar .bar .express{
+width: 65%;
+animation: express 2s;
+}
+.head2{
+color: white;
+font-family: poppins;
+display: none;
+}
+@keyframes express {
+0%{
+    width: 0%;
+}100%{
+    width: 65%;
+}
+}
+.skill_bar .bar .mongo{
+width: 60%;
+animation: mongo 2s;
+}
+@keyframes mongo {
+0%{
+    width: 0%;
+}100%{
+    width: 60%;
+}
+}
+
+.typewriter-text {
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: normal; /* Change this line */
+        margin: 0 auto;
+        letter-spacing: .15em;
+        animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
+        color: #ffffff;
+        size: 18px;
+        font-size: 44px;
+        font-family: poppins;
+        display: none;
+        font-weight: bold;
+        margin-top: 20px;
+        word-wrap: break-word;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+    }
+    @media (max-width: 768px) {
+      .final{
+        margin-left: 20px;
+        display: none;
+        align-items: center;
+      }
+      .emoji{
+        height: 20px;
+        margin-top: 13px;
+        margin-left: 10px;
+        width: 20px;
+      }
+      .check {
+        height: 20px;
+        width: 20px;
+        margin-top: 3px;
+        margin-right: 10px;
+      }
+        .skills_section{
+width: 100%;
+height: 100vh;
+padding: 0px 13%;
+background-color: rgba(0, 0, 0, 0);
+display: flex;
+margin-top: 100px;
+flex-direction: column;
+}
+  .glassmorphism, .glassmorphism2 {
+    margin: 10px;
+  }
+  .glassmorphism {
+    padding: 10px;
+  }
+  .glassmorphism2 {
+    padding: 10px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .separator {
+  display: inline-block;
+  width: 1px;
+  border-radius: 20px;
+  height: 10px;
+  background-color: white;
+  margin: 0 10px;
+}
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+  .subtitle {
+  display: inline-block;
+  size: 10px;
+  color: white;
+  font-family: poppinsReg;
+}
+  .typewriter-text {
+    font-size: 20px;
+  }
+  .head2 {
+    font-size: 24px;
+  }
+  .skills_section {
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  .skills_head h2 {
+    font-size: 24px;
+  }
+  .skills_head p {
+    font-size: 14px;
+  }
+  .skill_bar .info p {
+    font-size: 14px;
+  }
+  .skill_bar .info p:nth-child(2) {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 14px;
+  }
+}
+
+.slice {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 100%, 100% 0);
+    position: absolute;
+    transform-origin: 100%;
+}
+
+.poverty {
+    background-color: #ff5733;
+    transform: rotate(40deg);
+}
+
+.corruption {
+    background-color: #f0c500;
+    transform: rotate(110deg);
+}
+
+.terrorism {
+    background-color: #ff0000;
+    transform: rotate(200deg);
+}
+
+.global-warming {
+    background-color: #1aa12a;
+    transform: rotate(280deg);
+}
+
+.violence {
+    background-color: #0000ff;
+    transform: rotate(340deg);
+}
+
+.bookshelf {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.book {
+    width: 200px;
+    height: 300px;
+    margin: 0 10px;
+    perspective: 800px;
+    position: relative;
+}
+
+.spine {
+    width: 10px;
+    height: 100%;
+    background-color:#e8e8e8;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border: 5px solid #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateZ(5px);
+}
+
+.title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    transform: translateY(50px);
+    transition: transform 0.3s;
+}
+
+.book:hover .cover {
+    transform: rotateY(90deg);
+}
+
+.book:hover .title {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px){
+  .finaltexts{
+    position: relative;
+    z-index: 0;
+  }
+  .cross {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .finaltwo{
+    margin-left: 20px;
+    display: none;
+    align-items: center;
+  }
+  .maintxt {
+    color:  white;
+    font-size: 14px;
+    font-family: poppins;
+    margin-top: 10px;
+  }
+  .glassmorphism2{
+    display: block;
+  }
+  .pointstxt{
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-family: poppinsLight;
+  }
+  .congrats{
+    display: flex;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+
+  .imagetwo {
+    /* Make it a block-level element to center horizontally */
+    width: 290px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 290px;
+  }
+  
+  .imageone {
+    margin-left: 0;  /* Move it to the right end */
+    margin-right: auto;    /* Reset any existing right margin */
+    display: none;     /* Make it a block-level element to center horizontally */
+    width: 350px;
+    margin-bottom: 10px;
+    height: 350px;
+  }
+
+  .congratstxt{
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-content: center;
+  }
+  .wardiv{
+    display: block;
+    padding: 10px;
+  }
+  .warhead {
+    color: white;
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .wartxt{
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-family: poppins;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .progress-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .thank-you {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+  }
+  
+  .progress-bar {
+    width: 60%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress-text {
+    font-size: 12px;
+    width: fit-content;
+    color: #333;
+  }
+  
+  .questions-left {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  .displayimage{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    align-content: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: -50px;
+    animation: hoverUpDown 2s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+  }
+    .bookshelf {
+        display: none;
+        flex-wrap: wrap; /* Allow books to wrap to the next row on small screens */
+        justify-content: center; /* Center books horizontally on small screens */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .book {
+        width: 100%; /* Full width on mobile */
+        max-width: 100px; /* Limit width on larger screens */
+        height: auto; /* Let height adapt to content */
+        margin: 0 10px 20px; /* Adjust margin for spacing */
+        perspective: 500px;
+        position: relative;
+    }
+    
+    .spine {
+        width: 10px;
+        height: 100%;
+        background-color:#e8e8e8;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    
+    .cover {
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        border: 5px solid #222;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+    
+    .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateZ(5px);
+    }
+    
+    .title {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px;
+        text-align: center;
+        transform: translateY(50px);
+        transition: transform 0.3s;
+    }
+}

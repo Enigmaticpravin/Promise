@@ -165,6 +165,51 @@
           <h1>Thank you for participating!</h1>
         </div>
       </div>
+      <div class="wirediv">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire2" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+        <img class="borderwire2" src="images/art-deco-outline-stroke-in-golden-color-for-classy-and-luxury-style-premium-vintage-line-art-design-element-free-png.webp">
+      </div>
+
+      <div class="solvehead">
+        <h1 class="solve">What's the solution then?</h1>
+        <h4 class="solvetxt">"The solution to every big problem emerges from small steps."</h4>
+      </div>
+
+      <figure class="custom-card">
+        <img class="custom-image" src="images/1694778255145.png" alt="Sarah Dayan">
+        <div class="custom-content">
+          <blockquote class="custom-quote">
+            <p>
+              “The <i><b>Constituent Accountability and Issue Resolution Framework</b></i>
+              represents a visionary initiative aimed at reshaping the dynamics of
+              governance within the constituencies across our diverse nation.”
+            </p>
+          </blockquote>
+          <div class="authorcontain">
+            <figcaption>
+              <div class="custom-author-name">
+                Pravin Gupta
+              </div>
+              <div class="custom-author-title">
+                Founder, CEO at Opion
+              </div>
+            </figcaption>
+            <div class="container">
+              <button onclick="window.location.href='Constituent Accountability and Issue Resolution Framework.pdf'" class="cta-button">
+                  Click Me
+                  <span class="glow"></span>
+              </button>
+          </div>
+          </div>
+        </div>
+      </figure>
+      
       <script>
      const questions = document.querySelectorAll('.question');
 const thankYou = document.querySelector('.thank-you');
@@ -173,6 +218,9 @@ const heading = document.querySelector('.head2');
 const final = document.querySelector('.final');
 const bookset = document.querySelector('.bookshelf');
 const finaltwo = document.querySelector('.finaltwo');
+const wardiv = document.querySelector('.wirediv');
+const solvehead = document.querySelector('.solvehead');
+const custom_card = document.querySelector('.custom-card');
 const displayimage = document.querySelector('.displayimage');
 const progressmenu = document.querySelector('.progress-menu');
 let currentQuestionIndex = 0;
@@ -211,8 +259,14 @@ function showNextQuestion() {
     questions[currentQuestionIndex].style.animation = 'fadeOut 0.5s ease-in-out';
     setTimeout(() => {
       questions[currentQuestionIndex].style.display = 'none';
-      thankYou.style.display = 'block';
+      thankYou.style.display = 'none';
       progressmenu.style.display = 'none';
+      wardiv.style.display = "flex"
+      solvehead.style.display = "block"
+      solvehead.style.animation = 'fadeIn 0.5s ease-in-out';
+      wardiv.style.animation = 'fadeIn 0.5s ease-in-out';
+      custom_card.style.display = "flex"
+      custom_card.style.animation = 'fadeIn 0.5s ease-in-out';
       displayimage.style.display = 'none';
       thankYou.style.animation = 'fadeIn 0.5s ease-in-out';
       final.style.animation = 'fadeIn 0.5s ease-in-out';
@@ -282,6 +336,10 @@ questions[currentQuestionIndex].style.display = 'block';
         window.addEventListener('load', startTypewriter);
     </script>
   </div>
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+        <p class="copyright">&copy; Copyright, 2023 Opion Pvt. Ltd. All rights reserved.</p>
+    </div>
+</footer>
 </body>
-
 </html>
